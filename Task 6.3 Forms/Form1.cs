@@ -16,5 +16,50 @@ namespace Task_6._3_Forms
         {
             InitializeComponent();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                int n = Convert.ToInt32(numericUpDown1.Value);
+                int[,] mass = new int[n, n];
+                Random r = new Random();
+                for (int i = 0; i < n; i++)
+                {
+                    for (int j = 0; j < n; j++)
+                    {
+                        mass[i, j] = r.Next(1, 100);
+                        textBox1.Text += mass[i, j] + "     " + "\n\r";
+                    }
+                    textBox1.Text += "\n\r";
+                }
+
+                for (int i = 0; i < n; i++)
+                {
+                    int k = 0;
+                    for (int j = 0; j < n; j++)
+                    {
+                        if (mass[j, i] < mass[k, i])
+                        {
+                            k = j;
+                        }
+                    }
+                    mass[k, i] = 0;
+                }
+
+                for (int i = 0; i < n; i++)
+                {
+                    for (int j = 0; j < n; j++)
+                    {
+                        textBox2.Text += mass[i, j] + "     " + "\n\r";
+                    }
+                    textBox2.Text += "\n\r";
+                }
+            }
+            catch (Exception E)
+            {
+                textBox1.Text += E.Message;
+            }
+        }
     }
 }
