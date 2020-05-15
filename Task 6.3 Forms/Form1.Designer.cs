@@ -34,6 +34,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -67,11 +68,11 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(396, 74);
+            this.label1.Location = new System.Drawing.Point(450, 74);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(139, 13);
+            this.label1.Size = new System.Drawing.Size(136, 13);
             this.label1.TabIndex = 3;
-            this.label1.Text = "Минимум заменён нулем:";
+            this.label1.Text = "Минимум заменён нулем";
             // 
             // label2
             // 
@@ -89,12 +90,22 @@
             this.numericUpDown1.Size = new System.Drawing.Size(120, 20);
             this.numericUpDown1.TabIndex = 6;
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(97, 74);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(112, 13);
+            this.label3.TabIndex = 7;
+            this.label3.Text = "Массив целых чисел";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.ClientSize = new System.Drawing.Size(682, 278);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.numericUpDown1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -117,6 +128,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.NumericUpDown numericUpDown1;
+        private System.Windows.Forms.Label label3;
     }
 }
 
